@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="node_modules\chart.js\dist\Chart.js" crossorigin="anonymous"  ></script>
+	<script src="https://pagecdn.io/lib/chart/2.9.3/Chart.min.js" crossorigin="anonymous"  ></script>
+    <title>Demo chart</title>
+</head>
+
+
+<body>
+	<div style="position: relative; height:40vh; width:40vw">
+		<canvas id="myChart" width="400" height="400"></canvas>
+	</div>
+<script>
+
+var ctx = document.getElementById('myChart');
+var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+	   labels: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],
+	   datasets: [{
+	       data: {{ data }}
+		   }]
+	},
+    options: {
+		title: {
+		display: true,
+		text: 'Retrieval Demo',
+
+    }
+  }
+});
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="node_modules\chart.js\dist\Chart.js" crossorigin="anonymous"  ></script>
+	<script src="https://pagecdn.io/lib/chart/2.9.3/Chart.min.js" crossorigin="anonymous"  ></script>
+    <title>Demo chart</title>
+</head>
+
+
+<body>
+	<div style="position: relative; height:40vh; width:40vw">
+	<table>
+		<tr><td>Total Documents : {{ docs['numFound'] }}</td></tr>
+		{% for ids in docs['docs'] %}
+		<tr><td>{{ ids['id'] }}</td></tr>
+		{% endfor %}
+    </table>
+	</div>
+</body>
+
+</html>
